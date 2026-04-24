@@ -1,0 +1,37 @@
+.scrollBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  z-index: 99;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.scrollBtn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.scrollBtn:hover {
+  transform: translateY(-5px);
+  background-color: var(--accent-hover);
+}
+
+@media (max-width: 768px) {
+  .scrollBtn {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
