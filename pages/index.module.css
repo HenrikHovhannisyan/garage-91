@@ -15,14 +15,48 @@
 }
 
 .heroTitle {
-  font-size: 4.5rem;
+  font-size: 3.6rem;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-  line-height: 1.1;
+  line-height: 1.2;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 25px;
+}
+
+.hyundaiLogo {
+  height: 85px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+
+.kiaLogo {
+  height: 58px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+  margin-top: 5px;
+}
+
+.logoDivider {
+  width: 2px;
+  height: 65px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 2px;
+}
+
+.actionText {
+  display: block;
 }
 
 .heroSubtitle {
@@ -142,10 +176,27 @@
 
 @media (max-width: 768px) {
   .heroTitle {
-    font-size: 2.8rem;
-    letter-spacing: 1px;
+    font-size: 1.8rem;
+    letter-spacing: 0;
+    word-wrap: break-word;
+    hyphens: auto;
+    padding: 0 10px;
+  }
+  .hyundaiLogo {
+    height: 55px;
+  }
+  .kiaLogo {
+    height: 40px;
+    margin-top: 2px;
+  }
+  .logoDivider {
+    height: 45px;
+  }
+  .logoRow {
+    gap: 25px;
   }
   .heroSubtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    padding: 0 10px;
   }
 }

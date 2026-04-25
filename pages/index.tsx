@@ -12,14 +12,21 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>{siteData.name} - {t('heroTitle')}</title>
+        <title>{siteData.name} - {t('heroAction')}</title>
         <meta name="description" content={t('heroSubtitle')} />
       </Head>
 
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={`container ${styles.heroContent}`}>
-          <h1 className={styles.heroTitle}>{t('heroTitle')}</h1>
+          <h1 className={styles.heroTitle}>
+            <div className={styles.logoRow}>
+              <img src="https://cdn.simpleicons.org/hyundai/ffffff" alt="Hyundai" className={styles.hyundaiLogo} />
+              <div className={styles.logoDivider}></div>
+              <img src="https://cdn.simpleicons.org/kia/ffffff" alt="Kia" className={styles.kiaLogo} />
+            </div>
+            <div className={styles.actionText}>{t('heroAction')}</div>
+          </h1>
           <p className={styles.heroSubtitle}>{t('heroSubtitle')}</p>
           <a href="#about" className="btn-primary">{t('heroButton')}</a>
         </div>
