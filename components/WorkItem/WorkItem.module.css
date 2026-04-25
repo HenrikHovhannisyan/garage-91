@@ -59,3 +59,34 @@
   color: var(--text-secondary);
   font-size: 0.9rem;
 }
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 20px 0;
+}
+
+.toggleBtn {
+  flex: 1;
+  padding: 8px 15px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: var(--transition);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.toggleBtn:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.toggleBtn.activeBtn {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #fff;
+}

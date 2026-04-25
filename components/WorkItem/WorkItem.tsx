@@ -18,13 +18,8 @@ const WorkItem = ({ work }: WorkItemProps) => {
   const [showAfter, setShowAfter] = useState(false);
 
   return (
-    <div 
-      className={styles.workItem}
-      onMouseEnter={() => setShowAfter(true)}
-      onMouseLeave={() => setShowAfter(false)}
-      onClick={() => setShowAfter(!showAfter)}
-    >
-      <div className={styles.imageContainer}>
+    <div className={styles.workItem}>
+      <div className={styles.imageContainer} onClick={() => setShowAfter(!showAfter)}>
         {showAfter ? (
           <div className={styles.imgWrapper}>
             <div className={styles.label}>{t('after')}</div>
@@ -37,6 +32,22 @@ const WorkItem = ({ work }: WorkItemProps) => {
           </div>
         )}
       </div>
+      
+      <div className={styles.controls}>
+        <button 
+          className={`${styles.toggleBtn} ${!showAfter ? styles.activeBtn : ''}`}
+          onClick={() => setShowAfter(false)}
+        >
+          {t('before')}
+        </button>
+        <button 
+          className={`${styles.toggleBtn} ${showAfter ? styles.activeBtn : ''}`}
+          onClick={() => setShowAfter(true)}
+        >
+          {t('after')}
+        </button>
+      </div>
+
       <div className={styles.info}>
         <h3>{work.brand} {work.model} ({work.year})</h3>
         <p>{t('workDesc')}</p>
