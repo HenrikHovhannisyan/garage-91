@@ -124,33 +124,122 @@
 }
 
 .contactsGrid {
-  max-width: 600px;
-  margin: 0 auto;
-  background: var(--bg-secondary);
-  padding: 40px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border-color);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contactItems {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .contactItem {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
 }
 
-.contactItem a {
+.iconWrapper {
+  width: 40px;
+  height: 40px;
+  background: var(--accent-color);
+  color: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.iconWrapper svg {
+  width: 20px;
+  height: 20px;
+}
+
+.contactItem strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.contactItem p, .contactItem a {
   color: var(--text-secondary);
-  transition: var(--transition);
+  margin: 0;
+  font-size: 1rem;
 }
 
 .contactItem a:hover {
   color: var(--accent-color);
 }
 
+.socialLinks {
+  display: flex;
+  gap: 15px;
+}
+
+.socialLinks a {
+  width: 44px;
+  height: 44px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.socialLinks a img {
+  width: 20px;
+  height: 20px;
+  transition: filter 0.3s ease;
+}
+
+/* Invert white icons to black in light theme */
+:global([data-theme='light']) .socialLinks a img {
+  filter: invert(1);
+}
+
+.socialLinks a:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.socialLinks a:hover img {
+  filter: none; /* Keep white on hover since background becomes accent color */
+}
+
 .mapBtn {
+  width: fit-content;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapWrapper {
   width: 100%;
-  margin-top: 20px;
+}
+
+@media (max-width: 992px) {
+  .contactsGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .mapWrapper {
+    order: -1;
+  }
 }
 
 @media (max-width: 768px) {

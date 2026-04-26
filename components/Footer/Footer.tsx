@@ -4,14 +4,14 @@ import { siteData } from '@/data/data';
 import styles from './Footer.module.css';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { language } = useTranslation();
 
   return (
     <footer className={styles.footer}>
       <div className={`container ${styles.footerContainer}`}>
         <div className={styles.info}>
           <h3>Garage-91</h3>
-          <p>{siteData.address}</p>
+          <p>{siteData.address[language as keyof typeof siteData.address] || siteData.address.hy}</p>
           <p>{siteData.phone}</p>
           <p>{siteData.email}</p>
         </div>
