@@ -42,7 +42,7 @@ export default function Home() {
         <div className="container">
           <h2 className="section-title">{t('aboutTitle')}</h2>
           <div className={styles.aboutContent}>
-            <p>{t('aboutText')}</p>
+            <p dangerouslySetInnerHTML={{ __html: t('aboutText').replace(/\n/g, '<br />') }} />
           </div>
         </div>
       </section>
