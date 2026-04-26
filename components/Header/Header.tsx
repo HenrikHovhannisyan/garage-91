@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useTranslation } from '@/utils/translations';
 import { useTheme } from '@/utils/theme';
 import styles from './Header.module.css';
@@ -20,20 +21,37 @@ const Header = () => {
 
   const closeMenu = () => setIsMenuOpen(false);
 
+  const router = useRouter();
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith('/#')) {
-      e.preventDefault();
-      const id = href.replace('/#', '');
-      const element = document.getElementById(id);
-      if (element) {
-        const offset = 80;
-        const elementPosition = element.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - offset;
+    const isHomePage = router.pathname === '/' || router.pathname === '/home';
+    
+    if (href === '/') {
+      if (isHomePage) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+      closeMenu();
+      return;
+    }
 
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: 'smooth'
-        });
+    if (href.startsWith('/#')) {
+      if (isHomePage) {
+        e.preventDefault();
+        const id = href.replace('/#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          const offset = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+          closeMenu();
+        }
+      } else {
+        // On other pages, let Next.js navigate to the home page anchor
         closeMenu();
       }
     } else {

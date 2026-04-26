@@ -10,7 +10,7 @@ export const en = {
   heroSubtitle: "Professional localization for Hyundai and Kia vehicles, starting from 2017 models.",
   heroButton: "Learn More",
   aboutTitle: "About Us",
-  aboutText: "Using an <b>English or Chinese</b> interface in CIS countries is often <b>inconvenient</b> for most drivers. In Armenia, <b>Garage-91</b> offers a <b>professional and effective</b> solution to this problem: <b>high-quality localization</b> for <b>Hyundai and Kia</b> vehicles.\n\nWe are not limited to just translating the multimedia system. On many models, not only the head unit (<b>SHGU</b>) is localized, but also the <b>instrument cluster</b>, ensuring clear, understandable, and comfortable control.\n\nIn addition, we can significantly expand your car's capabilities by adding an <b>Android environment</b> and your favorite apps: <b>YouTube, Yandex Maps, Yandex Music</b>, and other useful apps.\n\nWe work <b>professionally</b>, paying attention to every detail, so that your car becomes more <b>comfortable, modern, and pleasant</b> for everyday use.",
+  aboutText: "Using an <b>English or Chinese</b> interface in CIS countries is often <b>inconvenient</b> for most drivers. In Armenia, <b>Garage-91</b> offers a <b>professional and effective</b> solution to this problem: <b>high-quality localization</b> for <b>Hyundai and Kia</b> vehicles.\n\nWe are not limited to just translating the multimedia system. On many models, not only the head unit (<b>HU</b>) is localized, but also the <b>instrument cluster</b>, ensuring clear, understandable, and comfortable control.\n\nIn addition, we can significantly expand your car's capabilities by adding an <b>Android environment</b> and your favorite apps: <b>YouTube, Yandex Maps, Yandex Music</b>, and other useful apps.\n\nWe work <b>professionally</b>, paying attention to every detail, so that your car becomes more <b>comfortable, modern, and pleasant</b> for everyday use.",
   worksTitle: "Our Works",
   seeAllWorks: "See all works",
   before: "BEFORE",
@@ -29,7 +29,7 @@ export const en = {
   forteDesc: "Russification completed.",
   elantraDesc: "Russification completed.",
   allRightsReserved: "All rights reserved.",
-  keywords: "Garage-91, localization in armenia, hyundai localization, kia localization, car programming armenia, head unit localization, garage 91, hyundai kia armenia",
+  keywords: "Garage-91, localization, rusafikacum, localization in armenia, hyundai localization, kia localization, car programming armenia, head unit localization, garage 91, hyundai kia armenia",
   ogTitle: "Garage-91 — Professional Hyundai & Kia Localization in Armenia",
   ogDescription: "High-quality head unit and instrument cluster localization, Android apps installation (YouTube, Yandex)."
 };

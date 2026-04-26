@@ -30,12 +30,13 @@ export default function Works() {
         {/* OpenGraph */}
         <meta property="og:title" content={`${siteData.name} - ${t('allWorks')}`} />
         <meta property="og:description" content={t('worksTitle')} />
-        <meta property="og:image" content={`${siteData.url}/logo.png`} />
-        <meta property="og:url" content={`${siteData.url}/works`} />
+        <meta property="og:image" content="https://garage-91.vercel.app/logo.png" />
+        <meta property="og:url" content="https://garage-91.vercel.app/works" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content={siteData.name} />
         
         {/* Canonical */}
-        <link rel="canonical" href={`${siteData.url}/works`} />
+        <link rel="canonical" href="https://garage-91.vercel.app/works" />
       </Head>
 
       <section className="section">

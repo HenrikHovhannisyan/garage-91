@@ -2,7 +2,7 @@ import { works } from './works';
 
 export const siteData = {
   name: "Garage-91",
-  url: "https://garage-91.am",
+  url: "https://garage-91.vercel.app",
   address: {
     hy: "ք. Երևան, Սմբատ Զորավարի փող., 49 տուն",
     ru: "г. Ереван, ул. Смбата Зоравара, дом 49",
@@ -15,8 +15,8 @@ export const siteData = {
     lon: 44.502863
   },
   socials: {
-    instagram: "https://instagram.com/garage91",
-    facebook: "https://facebook.com/garage91",
+    instagram: "https://www.instagram.com/garage_91.am/",
+    facebook: "https://www.facebook.com/profile.php?id=61562923029988",
     telegram: "https://t.me/+37499311091",
     whatsapp: "https://wa.me/37499311091"
   },

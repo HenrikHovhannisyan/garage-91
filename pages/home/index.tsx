@@ -20,14 +20,15 @@ export default function Home() {
         <title>{siteData.name} - {t('heroAction')}</title>
         <meta name="description" content={t('heroSubtitle')} />
         <meta name="keywords" content={t('keywords')} />
-        
+
         {/* OpenGraph */}
         <meta property="og:title" content={t('ogTitle')} />
         <meta property="og:description" content={t('ogDescription')} />
         <meta property="og:image" content={`${siteData.url}/logo.png`} />
         <meta property="og:url" content={siteData.url} />
         <meta property="og:type" content="website" />
-        
+        <meta property="og:site_name" content={siteData.name} />
+
         {/* Canonical */}
         <link rel="canonical" href={siteData.url} />
       </Head>
@@ -146,7 +147,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <a 
+              <a
                 href={`https://yandex.ru/maps/?rtext=~${siteData.coordinates.lat},${siteData.coordinates.lon}`}
                 target="_blank"
                 rel="noreferrer"
