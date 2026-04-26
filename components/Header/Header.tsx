@@ -62,13 +62,13 @@ const Header = () => {
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.headerContainer}`}>
-        <Link href="/" className={styles.logo} onClick={(e) => handleNavClick(e as any, '/')}>
+        <Link href="/" className={styles.logo} onClick={closeMenu}>
           <img src="/logo.png" alt="Garage-91 Logo" />
         </Link>
         
         <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
           <Link href="/" onClick={(e) => handleNavClick(e as any, '/')}>{t('home')}</Link>
-          <Link href="/#about" onClick={(e) => handleNavClick(e as any, '/#about')}>{t('about')}</Link>
+          <Link href="/about" onClick={closeMenu}>{t('about')}</Link>
           <Link href="/works" onClick={closeMenu}>{t('works')}</Link>
           <Link href="/#reviews" onClick={(e) => handleNavClick(e as any, '/#reviews')}>{t('reviews')}</Link>
           <Link href="/#faq" onClick={(e) => handleNavClick(e as any, '/#faq')}>{t('faq')}</Link>

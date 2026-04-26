@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '@/components/Layout/Layout';
 import WorkItem from '@/components/WorkItem/WorkItem';
 import { useTranslation } from '@/utils/translations';
@@ -38,6 +39,13 @@ export default function Works() {
         {/* Canonical */}
         <link rel="canonical" href="https://garage-91.vercel.app/works" />
       </Head>
+
+      <div className="container">
+        <Link href="/" className={styles.backButton}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          {t('back')}
+        </Link>
+      </div>
 
       <section className="section">
         <div className="container">

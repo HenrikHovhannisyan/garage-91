@@ -1,112 +1,83 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '@/components/Layout/Layout';
-import WorkItem from '@/components/WorkItem/WorkItem';
+import YandexMap from '@/components/YandexMap/YandexMap';
 import { useTranslation } from '@/utils/translations';
 import { siteData } from '@/data/data';
-import { testimonials } from '@/data/testimonials';
-import { faqData } from '@/data/faq';
-import TestimonialsSlider from '@/components/TestimonialsSlider/TestimonialsSlider';
-import FAQAccordion from '@/components/FAQAccordion/FAQAccordion';
-import YandexMap from '@/components/YandexMap/YandexMap';
-import styles from './index.module.css';
+import styles from './about.module.css';
 
-export default function Home() {
+export default function About() {
   const { t, language } = useTranslation();
 
   return (
     <Layout>
       <Head>
-        <title>{siteData.name} - {t('heroAction')}</title>
-        <meta name="description" content={t('heroSubtitle')} />
-        <meta name="keywords" content={t('keywords')} />
-
-        {/* OpenGraph */}
-        <meta property="og:title" content={t('ogTitle')} />
-        <meta property="og:description" content={t('ogDescription')} />
-        <meta property="og:image" content={`${siteData.url}/logo.png`} />
-        <meta property="og:url" content={siteData.url} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content={siteData.name} />
-
-        {/* Canonical */}
-        <link rel="canonical" href={siteData.url} />
+        <title>{siteData.name} - {t('aboutTitle')}</title>
+        <meta name="description" content={t('ogDescription')} />
       </Head>
 
-      {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={`container ${styles.heroContent}`}>
-          <h1 className={styles.heroTitle}>
-            <div className={styles.logoRow}>
-              <img src="https://cdn.simpleicons.org/hyundai/ffffff" alt="Hyundai" className={styles.hyundaiLogo} />
-              <div className={styles.logoDivider}></div>
-              <img src="https://cdn.simpleicons.org/kia/ffffff" alt="Kia" className={styles.kiaLogo} />
-            </div>
-            <div className={styles.actionText}>{t('heroAction')}</div>
-          </h1>
-          <p className={styles.heroSubtitle}>{t('heroSubtitle')}</p>
-          <Link href="/about" className="btn-primary">{t('heroButton')}</Link>
+      <div className="container">
+        <Link href="/" className={styles.backButton}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          {t('back')}
+        </Link>
+      </div>
+
+      {/* Simple Clean Hero */}
+      <section className={styles.aboutHero}>
+        <div className="container">
+          <div className={styles.heroInner}>
+            <h1 className={styles.mainTitle}>{t('aboutTitle')}</h1>
+            <div className={styles.divider}></div>
+            <p className={styles.heroLead}>{t('heroSubtitle')}</p>
+          </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="section">
+      {/* Main Content Section */}
+      <section className={styles.mainContentSection}>
         <div className="container">
-          <h2 className="section-title">{t('aboutTitle')}</h2>
-          <div className={styles.aboutContent}>
-            <p dangerouslySetInnerHTML={{ __html: t('aboutText').split('\n\n')[0].replace(/\n/g, '<br />') }} />
-            <div className={styles.readMoreWrapper}>
-              <Link href="/about" className={styles.readMoreBtn}>
-                {t('readMore')}
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginLeft: '8px' }}>
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </Link>
+          <div className={styles.contentWrapper}>
+            <div className={styles.fullText}>
+              {t('aboutText').split('\n\n').map((para: string, index: number) => (
+                <p key={index} className={styles.fadeIn} style={{ animationDelay: `${index * 0.2}s` }} dangerouslySetInnerHTML={{ __html: para.replace(/\n/g, '<br />') }} />
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Works Section */}
-      <section id="works" className={`section ${styles.darkBg}`}>
+      {/* Features Grid */}
+      <section className={styles.featuresSection}>
         <div className="container">
-          <h2 className="section-title">{t('worksTitle')}</h2>
-          <div className={styles.worksGrid}>
-            {siteData.works.slice(0, 6).map(work => (
-              <WorkItem key={work.id} work={work} />
-            ))}
-          </div>
-          <div className={styles.centerBtn}>
-            <Link href="/works" className="btn-primary">
-              {t('seeAllWorks')}
-            </Link>
+          <div className={styles.featuresGrid}>
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+              </div>
+              <h3>{language === 'hy' ? 'Բազմամյա փորձ' : language === 'ru' ? 'Многолетний опыт' : 'Years of Expertise'}</h3>
+              <p>{language === 'hy' ? 'Տարիների խորը մասնագիտացում Hyundai և Kia ավտոմեքենաների ռուսաֆիկացման գործում:' : language === 'ru' ? 'Глубокая многолетняя специализация в русификации автомобилей Hyundai и Kia.' : 'Deep specialization in Hyundai and Kia vehicle localization over many years.'}</p>
+            </div>
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              </div>
+              <h3>{language === 'hy' ? 'Պրոֆեսիոնալիզմ' : language === 'ru' ? 'Профессионализм' : 'Professionalism'}</h3>
+              <p>{language === 'hy' ? 'Անհատական մոտեցում յուրաքանչյուր մեքենային և բարձրակարգ լուծումների կիրառում:' : language === 'ru' ? 'Индивидуальный подход к каждому автомобилю и использование лучших решений.' : 'Individual approach to every car using the best solutions.'}</p>
+            </div>
+            <div className={styles.featureCard}>
+              <div className={styles.featureIcon}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <h3>{language === 'hy' ? 'Վստահություն' : language === 'ru' ? 'Доверие и Гарантия' : 'Trust & Warranty'}</h3>
+              <p>{language === 'hy' ? 'Մեր հաճախորդների վստահությունը և կատարված աշխատանքի երկարատև երաշխիքը մեր առաջնահերթությունն են:' : language === 'ru' ? 'Доверие наших клиентов и долгосрочная гарантия на все работы — наш главный приоритет.' : 'Our clients trust and long-term warranty on all works are our top priority.'}</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <section id="reviews" className="section">
-        <div className="container">
-          <h2 className="section-title">{t('reviewsTitle')}</h2>
-          <div className={styles.reviewsGrid}>
-            <TestimonialsSlider testimonials={testimonials} />
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section id="faq" className={`section ${styles.darkBg}`}>
-        <div className="container">
-          <h2 className="section-title">{t('faqTitle')}</h2>
-          <div className={styles.faqWrapper}>
-            <FAQAccordion items={faqData} />
-          </div>
-        </div>
-      </section>
-
-      {/* Contacts Section */}
-      <section id="contacts" className="section">
+      {/* Contact Section */}
+      <section className={`section ${styles.darkBg}`}>
         <div className="container">
           <h2 className="section-title">{t('contactsTitle')}</h2>
           <div className={styles.contactsGrid}>
