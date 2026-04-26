@@ -3,7 +3,7 @@ export const ru = {
   about: "О нас",
   works: "Наши работы",
   reviews: "Отзывы",
-  faq: "ЧаВо",
+  faq: "ЧЗВ",
   contacts: "Контакты",
   heroAction: "РУСИФИКАЦИЯ",
   and: "и",

@@ -119,28 +119,8 @@
   color: var(--text-secondary);
 }
 
-.faqList {
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.faqItem {
-  background: var(--bg-color);
-  padding: 20px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border-color);
-}
-
-.faqItem h3 {
-  margin-bottom: 10px;
-  color: var(--text-primary);
-}
-
-.faqItem p {
-  color: var(--text-secondary);
+.faqWrapper {
+  margin-top: 40px;
 }
 
 .contactsGrid {

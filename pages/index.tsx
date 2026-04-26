@@ -5,7 +5,9 @@ import WorkItem from '@/components/WorkItem/WorkItem';
 import { useTranslation } from '@/utils/translations';
 import { siteData } from '@/data/data';
 import { testimonials } from '@/data/testimonials';
+import { faqData } from '@/data/faq';
 import TestimonialsSlider from '@/components/TestimonialsSlider/TestimonialsSlider';
+import FAQAccordion from '@/components/FAQAccordion/FAQAccordion';
 import styles from './index.module.css';
 
 export default function Home() {
@@ -75,15 +77,8 @@ export default function Home() {
       <section id="faq" className={`section ${styles.darkBg}`}>
         <div className="container">
           <h2 className="section-title">{t('faqTitle')}</h2>
-          <div className={styles.faqList}>
-            <div className={styles.faqItem}>
-              <h3>Որքա՞ն է տևում ծրագրավորումը:</h3>
-              <p>Սովորաբար 1-2 ժամ:</p>
-            </div>
-            <div className={styles.faqItem}>
-              <h3>Արդյո՞ք երաշխիք տրվում է:</h3>
-              <p>Այո, մենք տրամադրում ենք երաշխիք մեր կատարած աշխատանքի համար:</p>
-            </div>
+          <div className={styles.faqWrapper}>
+            <FAQAccordion items={faqData} />
           </div>
         </div>
       </section>
