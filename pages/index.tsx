@@ -4,10 +4,12 @@ import Layout from '@/components/Layout/Layout';
 import WorkItem from '@/components/WorkItem/WorkItem';
 import { useTranslation } from '@/utils/translations';
 import { siteData } from '@/data/data';
+import { testimonials } from '@/data/testimonials';
+import TestimonialsSlider from '@/components/TestimonialsSlider/TestimonialsSlider';
 import styles from './index.module.css';
 
 export default function Home() {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
 
   return (
     <Layout>
@@ -64,13 +66,7 @@ export default function Home() {
         <div className="container">
           <h2 className="section-title">{t('reviewsTitle')}</h2>
           <div className={styles.reviewsGrid}>
-            {[1, 2, 3].map(item => (
-              <div key={item} className={styles.reviewCard}>
-                <div className={styles.stars}>★★★★★</div>
-                <p>"Շատ լավ սպասարկում, շնորհակալություն!"</p>
-                <strong>Արմեն Հ.</strong>
-              </div>
-            ))}
+            <TestimonialsSlider testimonials={testimonials} />
           </div>
         </div>
       </section>
