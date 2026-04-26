@@ -397,7 +397,7 @@
   }
 
   .fullText p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
   }
 
@@ -407,7 +407,7 @@
   }
 
   .contentWrapper {
-    padding: 20px 15px;
+    padding: 15px 10px;
   }
 
   .bannerIllustration {
