@@ -1,3 +1,5 @@
+import { works } from './works';
+
 export const siteData = {
   name: "Garage-91",
   address: "ք. Երևան, Սմբատ Զորավարի փող., 49 տուն",
@@ -7,78 +9,5 @@ export const siteData = {
     instagram: "https://instagram.com/garage91",
     facebook: "https://facebook.com/garage91",
   },
-  works: [
-    {
-      id: 1,
-      brand: "Hyundai",
-      model: "Sonata",
-      year: 2022,
-      beforeImg: "/works/demo-before.png",
-      afterImg: "/works/demo-after.png",
-    },
-    {
-      id: 2,
-      brand: "Kia",
-      model: "Optima",
-      year: 2021,
-      beforeImg: "/works/optima-before.png",
-      afterImg: "/works/optima-after.png",
-    },
-    {
-      id: 3,
-      brand: "Hyundai",
-      model: "Elantra",
-      year: 2023,
-      beforeImg: "/works/demo-before.png",
-      afterImg: "/works/demo-after.png",
-    },
-    {
-      id: 4,
-      brand: "Kia",
-      model: "Sportage",
-      year: 2022,
-      beforeImg: "/works/optima-before.png",
-      afterImg: "/works/optima-after.png",
-    },
-    {
-      id: 5,
-      brand: "Hyundai",
-      model: "Tucson",
-      year: 2021,
-      beforeImg: "/works/demo-before.png",
-      afterImg: "/works/demo-after.png",
-    },
-    {
-      id: 6,
-      brand: "Kia",
-      model: "Sorento",
-      year: 2023,
-      beforeImg: "/works/optima-before.png",
-      afterImg: "/works/optima-after.png",
-    },
-    {
-      id: 7,
-      brand: "Hyundai",
-      model: "Santa Fe",
-      year: 2020,
-      beforeImg: "/works/demo-before.png",
-      afterImg: "/works/demo-after.png",
-    },
-    {
-      id: 8,
-      brand: "Kia",
-      model: "Rio",
-      year: 2021,
-      beforeImg: "/works/optima-before.png",
-      afterImg: "/works/optima-after.png",
-    },
-    {
-      id: 9,
-      brand: "Hyundai",
-      model: "Palisade",
-      year: 2024,
-      beforeImg: "/works/demo-before.png",
-      afterImg: "/works/demo-after.png",
-    }
-  ]
+  works: works
 };

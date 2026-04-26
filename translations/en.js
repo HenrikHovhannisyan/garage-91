@@ -24,5 +24,8 @@ export const en = {
   getDirections: "Get Directions",
   allWorks: "All Works",
   page: "Page",
-  workDesc: "Programming and system update"
+  workDesc: "Programming and system update",
+  sorentoDesc: "Russification completed and Android menu added.",
+  forteDesc: "Russification completed.",
+  elantraDesc: "Russification completed."
 };

@@ -10,6 +10,7 @@ interface WorkItemProps {
     year: number;
     beforeImg: string;
     afterImg: string;
+    descKey?: string;
   };
 }
 
@@ -50,7 +51,7 @@ const WorkItem = ({ work }: WorkItemProps) => {
 
       <div className={styles.info}>
         <h3>{work.brand} {work.model} ({work.year})</h3>
-        <p>{t('workDesc')}</p>
+        <p>{work.descKey ? t(work.descKey) : t('workDesc')}</p>
       </div>
     </div>
   );
