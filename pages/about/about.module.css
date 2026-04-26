@@ -297,7 +297,8 @@
   margin-bottom: 4px;
 }
 
-.contactItem p, .contactItem a {
+.contactItem p,
+.contactItem a {
   color: var(--text-secondary);
   margin: 0;
   font-size: 1rem;
@@ -355,22 +356,73 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .mapWrapper {
     order: -1;
   }
 }
 
 @media (max-width: 768px) {
+  .aboutHero {
+    padding: 60px 0 40px;
+  }
+
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .heroLead {
+    font-size: 1.1rem;
+    padding: 0 15px;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .featureCard {
+    padding: 30px 20px;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contentWrapper {
+    padding: 40px 20px;
+    border-radius: 24px;
+    margin: 0 15px;
+  }
+
+  .fullText p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .backButton {
+    margin-top: 20px;
+    margin-left: 15px;
+  }
+
+  .contentWrapper {
+    padding: 20px 15px;
+  }
+
   .bannerIllustration {
     height: 250px;
   }
+
   .memphisGarage {
     width: 200px;
     height: 140px;
   }
+
   .memphisRoof {
     width: 220px;
   }
+
   .bannerTitle {
     font-size: 1.8rem;
   }

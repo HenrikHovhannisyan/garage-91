@@ -1,0 +1,48 @@
+.errorSection {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  text-align: center;
+  background: var(--bg-primary);
+}
+
+.errorContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.errorCode {
+  font-size: 10rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  line-height: 1;
+  margin-bottom: 20px;
+  opacity: 0.2;
+  font-family: 'Inter', sans-serif;
+}
+
+.errorTitle {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+}
+
+.errorText {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .errorCode {
+    font-size: 6rem;
+  }
+  
+  .errorTitle {
+    font-size: 2rem;
+  }
+}
