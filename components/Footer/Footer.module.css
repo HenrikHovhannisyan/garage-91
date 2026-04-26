@@ -1,45 +1,134 @@
 .footer {
-  background-color: var(--bg-secondary);
+  background: var(--bg-secondary);
+  padding: 60px 0 30px;
   border-top: 1px solid var(--border-color);
-  padding: 40px 0 20px;
   margin-top: 60px;
 }
 
 .footerContainer {
   display: flex;
   flex-direction: column;
+  gap: 40px;
+}
+
+.mainContent {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  width: 100%;
+}
+
+.logoCol {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footerLogo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.infoCol {
+  flex: 2;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.info h3 {
-  color: var(--accent-color);
-  margin-bottom: 10px;
-}
-
-.info p {
+.infoCol p {
+  margin: 0;
   color: var(--text-secondary);
-  margin-bottom: 5px;
+  font-size: 1.05rem;
 }
 
-.links {
+.infoCol a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.infoCol a:hover {
+  color: var(--accent-color);
+}
+
+.socialCol {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.socialLinks {
   display: flex;
   gap: 15px;
 }
 
-.links a {
-  color: var(--text-primary);
-  font-weight: bold;
-  transition: var(--transition);
+.socialLinks a {
+  width: 44px;
+  height: 44px;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
 
-.links a:hover {
-  color: var(--accent-color);
+.socialLinks a img {
+  width: 20px;
+  height: 20px;
+  transition: filter 0.3s ease;
+}
+
+/* Invert icons in light mode */
+:global([data-theme='light']) .socialLinks a img {
+  filter: invert(1);
+}
+
+.socialLinks a:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.socialLinks a:hover img {
+  filter: none;
+}
+
+.bottomSection {
+  width: 100%;
+  padding-top: 25px;
+  border-top: 1px solid var(--border-color);
+  text-align: center;
 }
 
 .copy {
-  margin-top: 20px;
   color: var(--text-secondary);
   font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .footerLogo {
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+  
+  .logoCol, .infoCol, .socialCol {
+    flex: none;
+    justify-content: center;
+  }
+  
+  .footer {
+    padding: 40px 0 20px;
+  }
 }

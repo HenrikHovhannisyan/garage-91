@@ -27,5 +27,6 @@ export const ru = {
   workDesc: "Программирование и обновление системы",
   sorentoDesc: "Выполнена русификация и добавлено меню Android.",
   forteDesc: "Выполнена русификация.",
-  elantraDesc: "Выполнена русификация."
+  elantraDesc: "Выполнена русификация.",
+  allRightsReserved: "Все права защищены."
 };

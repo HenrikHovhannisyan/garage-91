@@ -27,5 +27,6 @@ export const en = {
   workDesc: "Programming and system update",
   sorentoDesc: "Russification completed and Android menu added.",
   forteDesc: "Russification completed.",
-  elantraDesc: "Russification completed."
+  elantraDesc: "Russification completed.",
+  allRightsReserved: "All rights reserved."
 };
