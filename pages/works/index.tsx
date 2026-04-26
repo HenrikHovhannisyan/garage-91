@@ -25,6 +25,17 @@ export default function Works() {
       <Head>
         <title>{siteData.name} - {t('allWorks')}</title>
         <meta name="description" content={t('worksTitle')} />
+        <meta name="keywords" content={t('keywords')} />
+        
+        {/* OpenGraph */}
+        <meta property="og:title" content={`${siteData.name} - ${t('allWorks')}`} />
+        <meta property="og:description" content={t('worksTitle')} />
+        <meta property="og:image" content={`${siteData.url}/logo.png`} />
+        <meta property="og:url" content={`${siteData.url}/works`} />
+        <meta property="og:type" content="website" />
+        
+        {/* Canonical */}
+        <link rel="canonical" href={`${siteData.url}/works`} />
       </Head>
 
       <section className="section">

@@ -28,5 +28,8 @@ export const ru = {
   sorentoDesc: "Выполнена русификация и добавлено меню Android.",
   forteDesc: "Выполнена русификация.",
   elantraDesc: "Выполнена русификация.",
-  allRightsReserved: "Все права защищены."
+  allRightsReserved: "Все права защищены.",
+  keywords: "Garage-91, русификация в армении, русификация hyundai, русификация kia, прошивка авто армения, русификация шгу, гараж 91, hyundai kia armenia",
+  ogTitle: "Garage-91 — Профессиональная русификация Hyundai и Kia в Армении",
+  ogDescription: "Качественная русификация штатных систем, установка Android-приложений (YouTube, Яндекс) и прошивка приборных панелей."
 };

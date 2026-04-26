@@ -2,6 +2,7 @@ import { works } from './works';
 
 export const siteData = {
   name: "Garage-91",
+  url: "https://garage-91.am",
   address: {
     hy: "ք. Երևան, Սմբատ Զորավարի փող., 49 տուն",
     ru: "г. Ереван, ул. Смбата Зоравара, дом 49",

@@ -28,5 +28,8 @@ export const hy = {
   sorentoDesc: "Կատարվել է ռուսաֆիկացում և ավելացվել է Android մենյու:",
   forteDesc: "Կատարվել է ռուսաֆիկացում:",
   elantraDesc: "Կատարվել է ռուսաֆիկացում:",
-  allRightsReserved: "Բոլոր իրավունքները պաշտպանված են:"
+  allRightsReserved: "Բոլոր իրավունքները պաշտպանված են:",
+  keywords: "Garage-91, ռուսաֆիկացում հայաստանում, hyundai ռուսաֆիկացում, kia ռուսաֆիկացում, ավտոմեքենաների ծրագրավորում, շգու ռուսաֆիկացում, garage 91, hyundai kia armenia",
+  ogTitle: "Garage-91 — Hyundai և Kia մեքենաների պրոֆեսիոնալ ռուսաֆիկացում Հայաստանում",
+  ogDescription: "ՇԳՈՒ և սարքավորումների վահանակի որակյալ ռուսաֆիկացում, Android հավելվածների տեղադրում (YouTube, Yandex):"
 };

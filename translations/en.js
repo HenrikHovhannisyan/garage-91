@@ -28,5 +28,8 @@ export const en = {
   sorentoDesc: "Russification completed and Android menu added.",
   forteDesc: "Russification completed.",
   elantraDesc: "Russification completed.",
-  allRightsReserved: "All rights reserved."
+  allRightsReserved: "All rights reserved.",
+  keywords: "Garage-91, localization in armenia, hyundai localization, kia localization, car programming armenia, head unit localization, garage 91, hyundai kia armenia",
+  ogTitle: "Garage-91 — Professional Hyundai & Kia Localization in Armenia",
+  ogDescription: "High-quality head unit and instrument cluster localization, Android apps installation (YouTube, Yandex)."
 };
