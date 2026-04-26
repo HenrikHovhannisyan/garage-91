@@ -4,7 +4,7 @@ export const siteData = {
   name: "Garage-91",
   url: "https://garage-91.vercel.app",
   address: {
-    hy: "ք. Երևան, Սմբատ Զորավարի փող., 49 տուն",
+    hy: "ք. Երևան, Սմբատ Զորավարի փող, 49 տուն",
     ru: "г. Ереван, ул. Смбата Зоравара, дом 49",
     en: "49 Smbat Zoravar St, Yerevan, Armenia"
   },
