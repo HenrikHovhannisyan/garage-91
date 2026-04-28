@@ -27,22 +27,22 @@ export default function Works() {
         <title>{siteData.name} - {t('allWorks')}</title>
         <meta name="description" content={t('worksTitle')} />
         <meta name="keywords" content={t('keywords')} />
-        
+
         {/* OpenGraph */}
         <meta property="og:title" content={`${siteData.name} - ${t('allWorks')}`} />
         <meta property="og:description" content={t('worksTitle')} />
-        <meta property="og:image" content="https://garage-91.vercel.app/logo.png" />
-        <meta property="og:url" content="https://garage-91.vercel.app/works" />
+        <meta property="og:image" content={`${siteData.url}/logo.png`} />
+        <meta property="og:url" content={`${siteData.url}/works`} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={siteData.name} />
-        
+
         {/* Canonical */}
-        <link rel="canonical" href="https://garage-91.vercel.app/works" />
+        <link rel="canonical" href={`${siteData.url}/works`} />
       </Head>
 
       <div className="container">
         <Link href="/" className={styles.backButton}>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7" /></svg>
           {t('back')}
         </Link>
       </div>
@@ -50,7 +50,7 @@ export default function Works() {
       <section className="section">
         <div className="container">
           <h1 className="section-title">{t('allWorks')}</h1>
-          
+
           <div className={styles.worksGrid}>
             {currentWorks.map(work => (
               <WorkItem key={work.id} work={work} />
