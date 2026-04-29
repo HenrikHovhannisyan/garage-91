@@ -2,14 +2,14 @@ import { works } from './works';
 
 export const siteData = {
   name: "Garage-91",
-  url: "https://garage-91.vercel.app",
+  url: "https://garage-91.am",
   address: {
     hy: "ք. Երևան, Սմբատ Զորավարի փող, 49 տուն",
     ru: "г. Ереван, ул. Смбата Зоравара, дом 49",
     en: "49 Smbat Zoravar St, Yerevan, Armenia"
   },
   phone: "+37499311091",
-  email: "henrik.hovhannisyan.91@gmail.com",
+  email: "garage.91.am@gmail.com",
   coordinates: {
     lat: 40.153783,
     lon: 44.502863
@@ -17,7 +17,7 @@ export const siteData = {
   socials: {
     instagram: "https://www.instagram.com/garage_91.am/",
     facebook: "https://www.facebook.com/profile.php?id=61562923029988",
-    telegram: "https://t.me/+37499311091",
+    telegram: "https://t.me/garage_91",
     whatsapp: "https://wa.me/37499311091"
   },
   works: works
