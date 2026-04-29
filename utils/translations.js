@@ -10,20 +10,20 @@ const TranslationContext = createContext();
 
 export const TranslationProvider = ({ children }) => {
   const router = useRouter();
-  const { locale } = router;
-  const [language, setLanguage] = useState(locale || 'hy');
+  const [language, setLanguage] = useState('hy');
 
   useEffect(() => {
-    if (locale && translations[locale]) {
-      setLanguage(locale);
-      localStorage.setItem('language', locale);
-      document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=31536000`;
+    const savedLang = localStorage.getItem('language');
+    if (savedLang && translations[savedLang]) {
+      setLanguage(savedLang);
     }
-  }, [locale]);
+  }, []);
 
   const changeLanguage = (lang) => {
     if (translations[lang]) {
-      router.push(router.pathname, router.asPath, { locale: lang });
+      setLanguage(lang);
+      localStorage.setItem('language', lang);
+      document.cookie = `NEXT_LOCALE=${lang}; path=/; max-age=31536000`;
     }
   };
 
